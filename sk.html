@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite Commerce - Premium Shopping Experience</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModalBtn">&times;</span>
+    <h2>Welcome Back</h2>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Enter your username">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password">
+    </div>
+    <button class="login-btn" id="loginBtn">Sign In</button>
+    <p style="margin-top: 20px; font-size: 13px; color: var(--text-secondary); text-align: center;">Demo: admin / admin123</p>
+  </div>
+</div>
+
+<header class="header">
+  <div class="logo" id="logoBtn">
+    <span>⚡</span>
+    <span>EliteCommerce</span>
+  </div>
+  <button class="menu-btn" id="menuBtn">☰</button>
+
+  <nav id="navMenu" class="nav">
+    <a data-page="home" class="nav-link active">Home</a>
+    <a data-page="products" class="nav-link">Products</a>
+    <span id="userNav" style="display: none;">
+      <span class="user-info">
+        <span>👤</span>
+        <span id="userName"></span>
+      </span>
+      <a id="logoutLink" class="nav-link">Logout</a>
+    </span>
+    <a id="loginLink" class="nav-link">Login</a>
+    <a data-page="cart" class="nav-link">
+      🛒 Cart<span class="cart-badge" id="cartBadge">0</span>
+    </a>
+  </nav>
+</header>
+
+<div id="home" class="page active">
+  <section class="hero">
+    <div>
+      <h1>Shop Smarter,<br>Live Better</h1>
+      <p>Premium products at unbeatable prices</p>
+      <button class="btn" id="shopNowBtn">Explore Now →</button>
+      
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">10K+</span>
+          <span class="stat-label">Happy Customers</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Products</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">4.9★</span>
+          <span class="stat-label">Rating</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 EliteCommerce | Powered by Innovation</p>
+  </footer>
+</div>
+
+<div id="products" class="page">
+  <h2 class="title">Premium Collection</h2>
+  
+  <div class="search-container">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search products...">
+      <button class="search-btn" id="searchBtn">Search</button>
+    </div>
+  </div>
+
+  <div class="filter-section">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="electronics">Electronics</button>
+    <button class="filter-btn" data-filter="fashion">Fashion</button>
+    <button class="filter-btn" data-filter="accessories">Accessories</button>
+  </div>
+
+  <div class="product-container" id="productList"></div>
+
+  <footer>
+    <p>© 2025 EliteCommerce | Powered by Innovation</p>
+  </footer>
+</div>
+
+<div id="cart" class="page">
+  <div class="cart-container">
+    <h2 class="title">Your Shopping Cart</h2>
+    <div id="cartItems"></div>
+    <div id="cartTotal"></div>
+  </div>
+
+  <footer>
+    <p>© 2025 EliteCommerce | Powered by Innovation</p>
+  </footer>
+</div>
+
+<div id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
